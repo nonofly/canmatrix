@@ -713,8 +713,8 @@ class Define(object):
         if definition[0:3] == 'INT':
             self._type = 'INT'
             min, max = definition[4:].split(' ', 2)
-            self.min = int(min)
-            self.max = int(max)
+            self.min = int(float(min))
+            self.max = int(float(max))
 
         elif definition[0:6] == 'STRING':
             self.type = 'STRING'
